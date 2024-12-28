@@ -32,7 +32,7 @@ function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); 
   
     const formErrors = validate();
     if (Object.keys(formErrors).length > 0) {
@@ -41,10 +41,10 @@ function Contact() {
     }
   
     try {
-      // Send form data to the backend
+    
       await axios.post('http://localhost:5000/submit', formData);
       setSuccess(true);
-      setFormData({ name: '', email: '', message: '', seriesName: '', genre: '' }); // Clear the form
+      setFormData({ name: '', email: '', message: '', seriesName: '', genre: '' }); 
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('A apărut o eroare la trimiterea formularului.');

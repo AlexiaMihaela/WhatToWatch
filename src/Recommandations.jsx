@@ -18,7 +18,6 @@ function Recommendations() {
       const response = await fetch(`https://api.tvmaze.com/shows`);
       const data = await response.json();
 
-      // Filter shows by the selected genre
       const filteredShows = data.filter((show) =>
         show.genres.map((g) => g.toLowerCase()).includes(genre)
       );

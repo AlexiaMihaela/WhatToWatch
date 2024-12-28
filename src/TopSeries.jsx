@@ -8,9 +8,8 @@ function TopSeries() {
     useEffect(() => {
         const fetchSeries = async () => {
             try {
-                const response = await fetch('https://api.tvmaze.com/shows'); // TVmaze endpoint
+                const response = await fetch('https://api.tvmaze.com/shows');
                 const data = await response.json();
-                // Select top 10 shows based on rating
                 const topShows = data.sort((a, b) => b.rating.average - a.rating.average).slice(0, 20);
                 setSeries(topShows);
                 setLoading(false);
@@ -44,7 +43,7 @@ function TopSeries() {
                                 <tr key={serie.id}>
                                     <td>
                                         <img
-                                            src={serie.image?.medium || 'https://via.placeholder.com/100'} // Fallback if image is unavailable
+                                            src={serie.image?.medium || 'https://via.placeholder.com/100'} 
                                             alt={serie.name}
                                             width="100"
                                             height="auto"
