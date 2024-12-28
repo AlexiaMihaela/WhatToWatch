@@ -1,0 +1,111 @@
+/* App.css */
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main section {
+  background: transparent;
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+main section h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+main section ul {
+  list-style: none;
+  padding: 0;
+}
+
+main section ul li {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+main section ul li:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  main section {
+    width: 100%;
+  }
+}
