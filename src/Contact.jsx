@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -56,7 +57,8 @@ function Contact() {
     <div>
       <h1 className="contact-title">Contact</h1>
       {success && <p style={{ color: 'green' }}>Formularul a fost trimis cu succes!</p>}
-      <form noValidate onSubmit={handleSubmit}>
+      <div className="form-container">
+        <form noValidate onSubmit={handleSubmit}>
         <label htmlFor="name">Nume:</label>
         <input
           type="text"
@@ -114,6 +116,8 @@ function Contact() {
 
         <button type="submit">Trimite</button>
       </form>
+      </div>
+
     </div>
   );
 }

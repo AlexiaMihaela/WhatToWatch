@@ -1,18 +1,9 @@
-main {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+.form-container {
+    display: flex; /* Activează Flexbox */
+    justify-content: center; /* Centrează orizontal */
+    align-items: center; /* Centrează vertical */
 }
 
-main h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
 
 .contact-title {
     color: white;
@@ -24,6 +15,9 @@ main h1 {
 }
 
 form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     width: 90%;
     max-width: 600px;

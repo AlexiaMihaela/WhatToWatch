@@ -31,9 +31,9 @@ function Recommendations() {
   };
 
   return (
-    <main>
-      <section>
-        <h1>WhatToWatch</h1>
+    <div>
+        <h1 className="contact-title">WhatToWatch</h1>
+        <div className="form-container">
         <form onSubmit={handleFormSubmit}>
           <label htmlFor="genre">Gen preferat:</label>
           <select id="genre" name="genre" value={genre} onChange={handleGenreChange}>
@@ -51,10 +51,12 @@ function Recommendations() {
           </select>
           <button type="submit">Obține recomandări</button>
         </form>
+        </div>
 
         {loading && <p>Se încarcă...</p>}
 
         {!loading && recommendations.length > 0 && (
+          
           <table>
             <thead>
               <tr>
@@ -85,8 +87,7 @@ function Recommendations() {
         )}
 
         {!loading && recommendations.length === 0 && <p>Nu s-au găsit rezultate.</p>}
-      </section>
-    </main>
+    </div>
   );
 }
 
